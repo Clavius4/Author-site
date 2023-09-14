@@ -1,0 +1,37 @@
+@font-face {
+    font-family: themify;
+    src: url(fonts/themify.eot?-fvbane);
+    src: url(fonts/themify.eot?#iefix-fvbane) format('embedded-opentype'),
+         url(fonts/themify.woff?-fvbane) format('woff'),
+         url(fonts/themify.ttf?-fvbane) format('truetype'),
+         url(fonts/themify.svg?-fvbane#themify) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+[class*="ti-"],
+[class^=ti-] {
+    font-family: themify;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ti-wand:before {
+    content: "\e600";
+}
+
+.ti-volume:before {
+    content: "\e601";
+}
+
+/* ... (other icon definitions) ... */
+
+.ti-rss-alt:before {
+    content: "\e75f";
+}
