@@ -2,6 +2,494 @@
 <html lang="en-us"><head>
   <meta charset="utf-8">
   <title>Book Intel</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .preloader {
+      /* Your preloader styles */
+    }
+
+    .main-navigation {
+      background-color: #fff; /* Background color for the navigation bar */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for a better look */
+      z-index: 1000; /* Make sure it's on top of other content */
+    }
+
+    .navbar {
+      padding: 10px 0;
+    }
+
+    /* Add this CSS code to your stylesheet */
+.navbar-nav .nav-item .nav-link:active {
+  color: red; /* Set the color you want when the link is pressed */
+}
+
+
+    .navbar-brand h2 {
+      margin: 0;
+      color: #333; /* Brand name color */
+    }
+
+    .navbar-toggler {
+      /* Your toggle button styles */
+    }
+
+    .navbar-nav .nav-item {
+      /* Your navigation item styles */
+      margin: 0;
+    }
+
+    .nav-link {
+      /* Your navigation link styles */
+      color: #333;
+      padding: 10px 20px;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: red; /* Change color on hover or when active */
+    }
+    .fixed-top {
+  position: fixed;
+  z-index: 1030;
+  right: 0;
+  left: 0;
+}
+.main-navigation {
+  z-index: 9999;
+  padding: 10px 0;
+    padding-top: 10px;
+}
+@media (min-width: 992px) {
+  .pt-lg-2, .py-lg-2 {
+    padding-top: .5rem !important;
+  }
+}
+.pt-0, .py-0 {
+  padding-top: 0 !important;
+}
+.fixed-top {
+  top: 0;
+}
+.fixed-bottom, .fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+.navbar {
+  position: relative;
+  padding: 1rem;
+    padding-bottom: 1rem;
+}
+.pb-0, .py-0 {
+  padding-bottom: 0 !important;
+}
+@media (max-width: 991.98px) {
+  .navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.navbar > .container, .navbar > .container-fluid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.text-color {
+  color: #cc302b;
+}
+.mb-0, .my-0 {
+  margin-bottom: 0 !important;
+}
+.h2, h2 {
+  font-size: 1.625rem;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: lora,serif;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: .5rem;
+  color: #3f4451;
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+}
+.collapse:not(.show) {
+  display: none;
+}
+@media (min-width: 992px) {
+  .text-lg-left {
+    text-align: left !important;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+@media (min-width: 992px) {
+  .mt-lg-0, .my-lg-0 {
+    margin-top: 0 !important;
+  }
+}
+.ml-auto, .mx-auto {
+  margin-left: auto !important;
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+}
+.navbar-nav .nav-link {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  font-weight: 700;
+  color: #051441 !important;
+  text-transform: capitalize;
+}
+.navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+}
+.nav-link {
+  display: block;
+}
+.nav-link, .navbar {
+  padding: .5rem 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+a {
+  color: #222;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.testimonial {
+  position: relative;
+}
+.section-bottom {
+  padding-bottom: 8.125rem;
+}
+.testimonial::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: #f4f7fc;
+}
+.container {
+  max-width: 960px;
+}
+.justify-content-center {
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 992px) {
+  .col-lg-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.section-heading {
+  margin-bottom: 80px;
+}
+.text-center {
+  text-align: center !important;
+}
+address, dl, ol, p, pre, ul {
+  margin-bottom: 1rem;
+}
+dl, h1, h2, h3, h4, h5, h6, ol, p, pre, ul {
+  margin-top: 0;
+}
+.testimonial-wrap {
+  box-shadow: 0 20px 40px rgba(38,59,94,.1);
+  background: #fff;
+  border-radius: 15px;
+}
+.slick-slider {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list, .slick-slider, .slick-track {
+  position: relative;
+  display: block;
+}
+.align-items-center {
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+element {
+  opacity: 1;
+  width: 3410px;
+  transform: translate3d(-1240px, 0px, 0px);
+}
+.slick-slider .slick-list, .slick-slider .slick-track {
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.slick-track {
+  top: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-list, .slick-slider, .slick-track {
+  position: relative;
+  display: block;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: open sans,sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  font-weight: 300;
+  color: #6a7695;
+}
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+}
+body, caption {
+  text-align: left;
+}
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+position
+margin
+border
+padding
+3410×425.7
+3410×425.7
+relative
+box-sizing
+border-box
+display
+block
+float
+none
+line-height
+30px
+position
+relative
+offsetdiv.slick-list.draggable
+    z-index
+    auto
+}
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem !important;
+}
+element {
+}
+.test-author-thumb img {
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+.slick-slide img {
+  display: block;
+}
+.img-fluid, .img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+.testimonial-item-content {
+  text-align: center;
+}
+body {
+  font-family: open sans,sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  font-weight: 300;
+  color: #6a7695;
+}
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+}
+body, caption {
+  text-align: left;
+}
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+margin
+border
+padding
+80×80
+80×80
+static
+    box-sizing
+    border-box
+    display
+    block
+    float
+    none
+    line-height
+    30px
+    position
+    static
+    z-index
+    auto
+
+
+    /* Add your other CSS styles for sections as needed */
+  </style>
+
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -48,12 +536,15 @@
   
 </div>
 <div class="main-navigation fixed-top site-header pt-0 pt-lg-2" id="mainmenu-area">
+  <style>
+    
+  </style>
   <nav class="navbar navbar-expand-lg pb-0 pb-lg-3">
     <div class="container align-items-center">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="index.html">
         
-        <h2 class="mb-0 text-color">Book Intel</h2>
-        
+        <h2 class="mb-0 text-color" style="color: #cc302b;">Book Intel</h2>
+
       </a>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmain"
@@ -98,7 +589,7 @@
         
         <!-- nav btn -->
           <button class="snipcart-add-item btn btn-border-tp btn-small ml-0 ml-lg-3 mb-3 mb-lg-0" data-item-id="1"
-          data-item-name="The Man in the Glass House" data-item-image="assets/images/about/book.png" data-item-price="14.99" data-item-url="/">
+          data-item-name="THE BEST IS OURS" data-item-image="assets/images/about/cover.jpg" data-item-price="14.99" data-item-url="/">
           Purchase now
         </button>
         
@@ -116,14 +607,14 @@
       <div class="col-lg-7 col-md-8">
         <div class="main-banner">
           <span class="text-color font-weight-bold">Paul Robert</span>
-          <h1 class="mb-3 mt-2">The Man in the <!-- raw HTML omitted -->Glass House</h1>
+          <h1 class="mb-3 mt-2">THE BEST IS OURS</h1>
 
           <div class="mb-4">
             <h4>Price :- <span class="text-color">$14.99</span></h4>
           </div>
           <p class="mb-4">We work with our partners to streamline project plans that don’t just deliver on product perfection, but also delivers on time.</p>
           <button class="snipcart-add-item btn btn-main mt-2" data-item-id="1"
-          data-item-name="The Man in the Glass House" data-item-image="assets/images/about/book.png" data-item-price="14.99" data-item-url="/">
+          data-item-name="THE BEST IS OURS" data-item-image="assets/images/about/cover.jpg" data-item-price="14.99" data-item-url="/">
           Purchase now <i class="ti-angle-right ml-3"></i>
         </button>
         </div>
@@ -132,7 +623,7 @@
       
       <div class="col-lg-5 d-none d-lg-block">
         <div class="banner-img pt-5">
-          <img src="assets/images/about/book.png" alt="The Man in the Glass House" class="img-fluid w-100">
+          <img src="assets/images/about/cover.jpg" alt="THE BEST IS OURS" class="img-fluid w-100">
         </div>
       </div>
       
@@ -154,25 +645,25 @@
           <div class="book-pages">
             
             <div class="item">
-              <img src="assets/images/about/book_page.png" alt="page-preview" class="img-fluid">
+              <img src="assets/images/about/t1.jpg" alt="page-preview" class="img-fluid">
               <div class="overlay">
-                <a href="assets/images/about/book_page.png" class="popup-gallery img-fluid" data-title="Preview"><i
+                <a href="assets/images/about/t1.jpg" class="popup-gallery img-fluid" data-title="Preview"><i
                     class="ti-fullscreen"></i></a>
               </div>
             </div>
             
             <div class="item">
-              <img src="assets/images/about/book_page2.png" alt="page-preview" class="img-fluid">
+              <img src="assets/images/about/t1.jpg" alt="page-preview" class="img-fluid">
               <div class="overlay">
-                <a href="assets/images/about/book_page2.png" class="popup-gallery img-fluid" data-title="Preview"><i
+                <a href="assets/images/about/t1.jpg" class="popup-gallery img-fluid" data-title="Preview"><i
                     class="ti-fullscreen"></i></a>
               </div>
             </div>
             
             <div class="item">
-              <img src="assets/images/about/book_page.png" alt="page-preview" class="img-fluid">
+              <img src="assets/images/about/t1.jpg" alt="page-preview" class="img-fluid">
               <div class="overlay">
-                <a href="assets/images/about/book_page.png" class="popup-gallery img-fluid" data-title="Preview"><i
+                <a href="assets/images/about/t1.jpg" class="popup-gallery img-fluid" data-title="Preview"><i
                     class="ti-fullscreen"></i></a>
               </div>
             </div>
@@ -337,14 +828,76 @@
 
 
 
-<section class="section-bottom testimonial" id="review">
-    <style>
-        section-bottom {
-            opacity: 10;
-            width: 4070px;
-            transform: translate3d(-1480px, 0px, 0px);
-          }
-    </style>
+<section id="review" class="section-bottom testimonial">
+  <style>
+    /* Container for testimonials */
+    .testimonial {
+      overflow: hidden;
+    }
+  
+    /* Testimonial cards container */
+    .testimonial .testimonial-wrap {
+      display: flex;
+      transition: transform 2s ease-in-out;
+      overflow: hidden;
+    }
+  
+    /* Individual testimonial card */
+    .testimonial .test-item {
+      flex: 0 0 calc(25% - 20px); /* Adjust the width and margin as needed for responsiveness */
+      margin-right: 25px; /* Adjust the margin as needed */
+      background-color: #fff;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      width: 490px; /* Set the width to a specific value */
+      height: 490px; /* Set the height to the same value to make it square */
+    }
+  
+    /* Keyframes for sliding animation */
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(-200%);
+      }
+      75% {
+        transform: translateX(-300%);
+      }
+      100% {
+        transform: translateX(-400%);
+      }
+    }
+  
+    /* Apply the sliding animation */
+    .testimonial.slide .testimonial-wrap {
+      animation: slide 1s infinite; /* Adjust the duration as needed */
+    }
+  </style>
+  <script>
+    const sliderContainer = document.querySelector('.slider-container');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    let currentIndex = 0;
+  
+    function displayNextItem() {
+      sliderItems[currentIndex].style.display = 'none'; // Hide current item
+      currentIndex = (currentIndex + 1) % sliderItems.length; // Move to the next item
+      sliderItems[currentIndex].style.display = 'block'; // Display the next item
+    }
+  
+    // Initial display
+    sliderItems[currentIndex].style.display = 'block';
+  
+    // Automatically switch to the next item every 3 seconds (adjust timing as needed)
+    setInterval(displayNextItem, 3000);
+  </script>
+  
+  
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-12">
@@ -490,7 +1043,7 @@
 
       <div class="col-lg-6 col-md-6">
         <div class="mt-5 mt-lg-0">
-          <img src="assets/images/about/ipad.jpg" alt="" class="img-fluid w-100">
+          <img src="assets/images/about/t3.jpg" alt="" class="img-fluid w-100">
         </div>
       </div>
     </div>
@@ -685,7 +1238,7 @@
   <div class="blog-item-content p-4">
     <div class="blog-meta mb-2">
       <span><i class="ti-time mr-2"></i>23 June, 2023</span> <i class="ti-user ml-2"></i>
-      Themefisher
+      CHILD OF AFRICA
     </div>
     <h4 class="mt-2 mb-3"><a href="/blog/blog-post/">My Awesome Blog Post</a></h4>
   </div>
@@ -809,7 +1362,7 @@
   data-api-key="M2E5YjA3NjMtYzRiYS00YzVjLWEyYWYtNDY5ZDI0OWZhYjg5"></script>
 <script>
   Snipcart.execute('registerLocale', 'en', {
-    powered_by: "Themefisher"
+    powered_by: "CHILD OF AFRICA"
   });
 </script>
 
@@ -818,6 +1371,22 @@
 <script src="js/script.min.js"></script>
 <!-- google analitycs -->
 
+<!-- Include JavaScript libraries and code for smooth scrolling -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Smooth scrolling for anchor links
+    $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top
+        }, 1000); // Adjust the duration as needed (in milliseconds)
+      }
+    });
+  });
+</script>
 
 
 
